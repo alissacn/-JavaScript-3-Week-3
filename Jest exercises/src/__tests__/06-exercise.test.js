@@ -51,10 +51,11 @@ describe("06-exercises", () => {
 
     // Finish the test
     fetchUserOK(userID)
-    .then(value => {
+    .then(resolvedData => {
       expect(resolvedData).toEqual(expectedUser);
       done();
-    });
+    })
+    .catch(error => console.error(error))
   });
 
   /**

@@ -9,7 +9,7 @@ describe("09-exercises", () => {
   beforeAll(() => {
     // 1. Spy on the 'add' method of the calculator object
     //    and save the spy in the `addSpy` variable
-    addSpy = jest.addSpy(calculator, "add")
+    addSpy = jest.spyOn(calculator, "add")
   });
 
   // 2. Clear the mock calls to the addSpy so that the tests work
@@ -61,7 +61,7 @@ describe("09-exercises", () => {
     expect(result).toBe(15);
 
     // 10. Make an assertion that the addSpy has been called 1 time
-   expect(addSpy).toHaveBeenCalledTimes(1)
+   expect(addSpy).toHaveBeenCalledTimes(1);
     // 11. Make an assertion that the addSpy has been called with the
     //     numbers 10 and 5
     expect(addSpy).toHaveBeenCalledWith(10, 5);

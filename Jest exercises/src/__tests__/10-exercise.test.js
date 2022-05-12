@@ -7,8 +7,8 @@ describe("10-exercises", () => {
   beforeAll(() => {
     // 1. set the default inner html of the document body
     //    to have a div with a class of .wrapper
-    const innerHTML = document.createElement("div");
-    innerHTML.classList.add = ("wrapper");
+    let innerHTML = document.createElement("div");
+    innerHTML.classList.add("wrapper");
     document.body.appendChild(innerHTML);
   });
 
@@ -16,7 +16,7 @@ describe("10-exercises", () => {
     // You should make 1 assertion in this test, see bellow
     expect.assertions(1);
 
-    const btnText = "Save";
+    let btnText = "Save";
 
     // 2. execute the addButton function and pass it as an argument
     //    the `btnText` variable
